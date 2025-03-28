@@ -6,15 +6,21 @@ class Card extends HTMLElement{
     };
 
     connectedCallback(){
-        this.render()
+        this.render
     }
 
-
-    async loadData (){
+    
+    async render (){
         this.shadowRoot.innerHTML = `
-            <h1>hola</h1>
+        <div id="container">
+        <h1>Destino</h1>
+        <h2>duracion</h2>
+        <h3>costo</h3>
+        </div>
         `
+        const data = await fetch ("data.json")
     }
+    
 
      
 
@@ -27,4 +33,6 @@ class Card extends HTMLElement{
 
 
 }
-export default Card
+
+customElements.define("card-component", Card)
+export {Card}
