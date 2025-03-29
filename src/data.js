@@ -1,4 +1,5 @@
-[
+function viajeData (){
+  return [
     {
       "id": 1,
       "destino": "París, Francia",
@@ -168,5 +169,7 @@
       "alojamiento": "Resort",
       "guia_incluido": true
     }
-   ]
+  ]
+}
+export {viajeData}
    

@@ -1,3 +1,4 @@
+import {viajeData} from "../data.js"
 class Card extends HTMLElement{
     constructor(){
         super()
@@ -10,29 +11,18 @@ class Card extends HTMLElement{
     }
 
     
-    async render (){
+    render (){
         this.shadowRoot.innerHTML = `
-        <div id="container">
-        <h1>Destino</h1>
-        <h2>duracion</h2>
-        <h3>costo</h3>
-        </div>
+            <h1>Destino</h1>
+            <h2>duracion</h2>
+            <h3>costo</h3>
         `
-        const data = await fetch ("data.json")
+      
     }
-    
-
      
-
-    
-
     
     
-
-
-
-
 }
 
 customElements.define("card-component", Card)
-export {Card}
+export default Card
